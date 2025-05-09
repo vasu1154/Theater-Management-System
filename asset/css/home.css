@@ -1,0 +1,80 @@
+﻿/* Dynamic Hero Section */
+.c
+{
+    background-image:url("http://localhost:34130/TS/Image/theatre.jpeg");
+    background-size:cover;
+    border-radius:2px;
+    
+}
+.hero {
+    text-align: center;
+    height:700px;
+    padding: 100px 20px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .btn-primary {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero .btn-primary:hover {
+    background-color: #FF4500;
+}
+
+/* Latest Movies Section */
+.latest-movies {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.latest-movies h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.movie-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.movie-item img 
+{
+    width:250px;
+    height: 350px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.movie-item img:hover {
+    transform: scale(1.05);
+}
+
+.movie-item h4 {
+    font-size: 20px;
+    color: #555;
+}

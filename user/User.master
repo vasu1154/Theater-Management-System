@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="user_User" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Movie Ticket Booking System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="../asset/css/usermaster.css" />
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div class="wrapper">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">Theatre Management System</div>
+                <ul>
+                    <li><a href="Home.aspx" >Home</a></li>
+                    <li><a href="Movies.aspx">Movies</a></li>
+                    <li><a href="ContactUs.aspx">Contact Us</a></li>
+                    <li><a href="AboutUs.aspx">About Us</a></li>
+                    <li><a href="../Login.aspx">Admin Login</a></li>
+                    <br /><br /><br />
+                    <li>
+                        <asp:Button ID="Button3" runat="server" Text="Login" onclick="Button1_Click" 
+                            CssClass="btn btn-success" PostBackUrl="~/UserLogin.aspx" Width="220px" 
+                            Height="40px"></asp:Button>
+                    </li>
+                    
+                    <li>
+                        <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-danger" 
+                            onclick="Button1_Click1" Height="40px" Width="220px" />
+                    </li>
+                </ul>
+            </div>
+            <!-- Main Content -->
+            <div class="content">
+                
+                <div class="main-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Theatre Management System. All rights reserved.</p>
+        </footer>
+    </form>
+</body>
+</html>

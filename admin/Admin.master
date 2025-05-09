@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="../asset/css/StyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap-5.3.3-dist/css/bootstrap.rtl.min.css" />
+    <script type="text/javascript" src="../asset/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul>
+                <li><a href="Dashbord.aspx">Dashboard</a></li>
+                <li><a href="ManageMovies.aspx">Manage Movies</a></li>
+                <li><a href="ManageShows.aspx">Manage Shows</a></li>
+                <li><a href="ManageSeats.aspx">Manage Seats</a></li>
+                <li><a href="ViewBooking.aspx">View Bookings</a></li>
+                <li><a href="Logout.aspx">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <header>
+                <div class="topbar">
+                    <h1>Welcome, <%= Session["AdminName"] %></h1>
+                    <div class="logout">
+                        <asp:Button ID="Button1" runat="server" Text="Logout" onclick="Button1_Click"></asp:Button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
